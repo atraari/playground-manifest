@@ -24,15 +24,15 @@ fetch="../seL4"
 
 <project remote="seL4" name="seL4.git" path="kernel" revision="3.0.1"/>
 
-<project name="seL4_tools.git" path="projects/tools" revision="3.0.x-compatible">
+<project remote="seL4" name="seL4_tools.git" path="projects/tools" revision="3.0.x-compatible">
 	<linkfile src="common-tool" dest="tools/common"/>
 	<linkfile src="kbuild-tool" dest="tools/kbuild"/>
 	<linkfile src="elfloader-tool" dest="tools/elfloader" />
 </project>
 
-<project name="musllibc.git" path="libs/libmuslc" revision="3.0.x-compatible"/>
+<project remote="seL4" name="musllibc.git" path="libs/libmuslc" revision="3.0.x-compatible"/>
 
-<project name="seL4_libs.git" path="projects/seL4_libs" revision="3.0.x-compatible">
+<project remote="seL4" name="seL4_libs.git" path="projects/seL4_libs" revision="3.0.x-compatible">
 	<linkfile src="libsel4allocman" dest="libs/libsel4allocman" />
 	<linkfile src="libsel4bench" dest="libs/libsel4bench" />
 	<linkfile src="libsel4debug" dest="libs/libsel4debug" />
@@ -48,7 +48,7 @@ fetch="../seL4"
 	<linkfile src="libsel4vspace" dest="libs/libsel4vspace" />
 </project>
 
-<project name="util_libs.git" path="projects/util_libs" revision="3.0.x-compatible">
+<project remote="seL4" name="util_libs.git" path="projects/util_libs" revision="3.0.x-compatible">
 	<linkfile src="libcpio" dest="libs/libcpio" />
 	<linkfile src="libelf"  dest="libs/libelf" />
 	<linkfile src="libethdrivers"  dest="libs/libethdrivers" />
@@ -62,10 +62,10 @@ fetch="../seL4"
 -->
 
 <remote name="atraari"
-fetch="../atraari"
+fetch="."
 />
 
-<project name="playground.git" path="projects/playground">
+<project remote="atraari" name="playground.git" path="projects/playground">
 	<linkfile src="Makefile" dest="Makefile"/>
 	<linkfile src="Kbuild" dest="Kbuild"/>
 	<linkfile src="Kconfig" dest="Kconfig"/>
