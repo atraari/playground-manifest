@@ -66,10 +66,6 @@ remote="seL4"
 fetch="."
 />
 
-<default revision="master"
-remote="atraari"
-/>
-
 <project name="playground.git" path="projects/playground">
 	<linkfile src="Makefile" dest="Makefile"/>
 	<linkfile src="Kbuild" dest="Kbuild"/>
