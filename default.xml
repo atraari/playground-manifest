@@ -19,10 +19,6 @@
 fetch="../seL4"
 />
 
-<default revision="master"
-remote="seL4"
-/>
-
 <project name="seL4.git" path="kernel" revision="3.0.1"/>
 
 <project name="seL4_tools.git" path="projects/tools" revision="3.0.x-compatible">
@@ -63,7 +59,7 @@ remote="seL4"
 -->
 
 <remote name="atraari"
-fetch="."
+fetch="../atraari"
 />
 
 <project name="playground.git" path="projects/playground">
