@@ -75,7 +75,7 @@ fetch="../seL4"
 	<linkfile src="src/libs/libplayground" dest="libs/libplayground"/>
 	<linkfile src="../../kernel/libsel4" dest="libs/libsel4"/>
 	
-	<linkfile src="apps" dest="apps"/>
+	<linkfile src="src/apps" dest="apps"/>
 	
 	<linkfile src="img-root" dest="img-root"/>
 	
