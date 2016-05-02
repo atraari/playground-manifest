@@ -8,7 +8,7 @@ playgroundOS is just a way for me to familiarize with seL4 kernel and what it ha
 
 1. Make sure you read http://sel4.systems/Download/. Set up the environment (repo tool, cross compilers...etc) as per the instructions on the page. 
 
-2. After this init and sync the repo
+2. After this init and sync the repo within the desired directory (eg. /playground/):
   > repo init -u https://github.com/atraari/playground-manifest -b master
 
   > repo sync
