@@ -10,6 +10,7 @@ playgroundOS is just a way for me to familiarize with seL4 kernel and what it ha
 
 2. After this init and sync the repo
   > repo init -u https://github.com/atraari/playground-manifest -b master
+
   > repo sync
 
 3. Make sure to install mkisofs. On Debian/Ubuntu you can do itlike this:
