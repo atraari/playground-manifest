@@ -22,7 +22,7 @@ fetch="../seL4"
 <default revision="master"
 />
 
-<project name="seL4.git" path="kernel" revision="3.0.1"/>
+<project remote="seL4" name="seL4.git" path="kernel" revision="3.0.1"/>
 
 <project name="seL4_tools.git" path="projects/tools" revision="3.0.x-compatible">
 	<linkfile src="common-tool" dest="tools/common"/>
