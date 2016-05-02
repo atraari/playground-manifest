@@ -11,6 +11,14 @@
 <manifest>
 
 <!--
+	Add the playgroundOS core remote repo
+-->
+
+<remote name="atraari"
+fetch="."
+/>
+
+<!--
 	According to what I read in default.xml of sel4test-manifest the path here
 	should be '../seL4'
 -->
@@ -22,7 +30,7 @@ fetch="../seL4"
 <default revision="master"
 />
 
-<project remote="seL4" name="seL4.git" path="kernel" revision="3.0.1"/>
+<project remote="seL4" name="seL4.git" path="kernel" revision="refs/tags/3.0.1"/>
 
 <project remote="seL4" name="seL4_tools.git" path="projects/tools" revision="3.0.x-compatible">
 	<linkfile src="common-tool" dest="tools/common"/>
@@ -56,14 +64,6 @@ fetch="../seL4"
 	<linkfile src="libplatsupport" dest="libs/libplatsupport" />
 	<linkfile src="libutils" dest="libs/libutils" />
 </project>
-
-<!--
-	Now to add the playgroundOS core repo
--->
-
-<remote name="atraari"
-fetch="."
-/>
 
 <project remote="atraari" name="playground.git" path="projects/playground">
 	<linkfile src="Makefile" dest="Makefile"/>
