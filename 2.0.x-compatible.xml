@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Copyright 2016, atraari
+	
+	This software may be distributed and modified according to the terms of
+	the BSD 2-Clause license. Note that NO WARRANTY is provided.
+	See "LICENSE" for details.
+-->
+
+<manifest>
+
+<!--
+	Add the playgroundOS core remote repo
+-->
+
+<remote name="atraari"
+fetch="."
+/>
+
+<!--
+	According to what I read in default.xml of sel4test-manifest the path here
+	should be '../seL4'
+-->
+
+<remote name="seL4"
+fetch="../seL4"
+/>
+
+<default revision="master"
+/>
+
+<project remote="seL4" name="seL4.git" path="kernel" revision="refs/tags/2.0.0"/>
+
+<project remote="seL4" name="seL4_tools.git" path="projects/tools" revision="2.0.x-compatible">
+	<linkfile src="common-tool" dest="tools/common"/>
+	<linkfile src="kbuild-tool" dest="tools/kbuild"/>
+	<linkfile src="elfloader-tool" dest="tools/elfloader" />
+</project>
+
+<project remote="seL4" name="musllibc.git" path="libs/libmuslc" revision="2.0.x-compatible"/>
+
+<project remote="seL4" name="seL4_libs.git" path="projects/seL4_libs" revision="2.0.x-compatible">
+	<linkfile src="libsel4allocman" dest="libs/libsel4allocman" />
+	<linkfile src="libsel4bench" dest="libs/libsel4bench" />
+	<linkfile src="libsel4debug" dest="libs/libsel4debug" />
+	<linkfile src="libsel4muslcsys" dest="libs/libsel4muslcsys" />
+	<linkfile src="libsel4platsupport" dest="libs/libsel4platsupport" />
+	<linkfile src="libsel4simple" dest="libs/libsel4simple" />
+	<linkfile src="libsel4simple-default" dest="libs/libsel4simple-default" />
+	<linkfile src="libsel4simple-stable" dest="libs/libsel4simple-stable" />
+	<linkfile src="libsel4test" dest="libs/libsel4test" />
+	<linkfile src="libsel4utils" dest="libs/libsel4utils" />
+	<linkfile src="libsel4vka" dest="libs/libsel4vka" />
+	<linkfile src="libsel4vmm" dest="libs/libsel4vmm" />
+	<linkfile src="libsel4vspace" dest="libs/libsel4vspace" />
+</project>
+
+<project remote="seL4" name="util_libs.git" path="projects/util_libs" revision="2.0.x-compatible">
+	<linkfile src="libcpio" dest="libs/libcpio" />
+	<linkfile src="libelf"  dest="libs/libelf" />
+	<linkfile src="libethdrivers"  dest="libs/libethdrivers" />
+	<linkfile src="libpci"  dest="libs/libpci" />
+	<linkfile src="libplatsupport" dest="libs/libplatsupport" />
+	<linkfile src="libutils" dest="libs/libutils" />
+</project>
+
+<project remote="atraari" name="playground.git" path="projects/playground" revision="2.0.x-compatible">
+	<linkfile src="src/Makefile" dest="Makefile"/>
+	<linkfile src="src/Kbuild" dest="Kbuild"/>
+	<linkfile src="src/Kconfig" dest="Kconfig"/>
+	
+	<linkfile src="src/libs/Kbuild" dest="libs/Kbuild"/>
+	<linkfile src="src/libs/Kconfig" dest="libs/Kconfig"/>
+	<linkfile src="src/libs/libplayground" dest="libs/libplayground"/>
+	<linkfile src="../../kernel/libsel4" dest="libs/libsel4"/>
+	
+	<linkfile src="src/apps" dest="apps"/>
+	
+	<linkfile src="img-root" dest="img-root"/>
+	
+	<linkfile src="scripts" dest="scripts"/>
+	
+	<linkfile src="docs" dest="docs"/>
+</project>
+
+<project remote="atraari" name="libplaygroundsys.git" path="libs/libplaygroundsys" revision="master" />
+
+</manifest>
