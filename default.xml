@@ -38,7 +38,7 @@ fetch="../seL4"
 	<linkfile src="elfloader-tool" dest="tools/elfloader" />
 </project>
 
-<project remote="seL4" name="musllibc.git" path="libs/libmuslc" revision="sel4"/>
+<project remote="seL4" name="musllibc.git" path="libs/libmuslc" revision="refs/tags/3.0.x-compatible"/>
 
 <project remote="seL4" name="seL4_libs.git" path="projects/seL4_libs" revision="3.0.x-compatible">
 	<linkfile src="libsel4allocman" dest="libs/libsel4allocman" />
