@@ -84,6 +84,6 @@ fetch="../seL4"
 	<linkfile src="docs" dest="docs"/>
 </project>
 
-<project remote="atraari" name="libplaygroundsys.git" path="libs/libplaygroundsys" revision="1.0.x-compatible" />
+<project remote="atraari" name="libplaygroundsys.git" path="libs/libplaygroundsys" revision="master" />
 
 </manifest>
