@@ -65,7 +65,7 @@ fetch="../seL4"
 	<linkfile src="libutils" dest="libs/libutils" />
 </project>
 
-<project remote="atraari" name="playground.git" path="projects/playground">
+<project remote="atraari" name="playground.git" path="projects/playground" revision="2.0.x-compatible">
 	<linkfile src="src/Makefile" dest="Makefile"/>
 	<linkfile src="src/Kbuild" dest="Kbuild"/>
 	<linkfile src="src/Kconfig" dest="Kconfig"/>
@@ -84,6 +84,6 @@ fetch="../seL4"
 	<linkfile src="docs" dest="docs"/>
 </project>
 
-<project remote="atraari" name="libplaygroundsys.git" path="libs/libplaygroundsys" />
+<project remote="atraari" name="libplaygroundsys.git" path="libs/libplaygroundsys" revision="1.0.x-compatible" />
 
 </manifest>
