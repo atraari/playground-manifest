@@ -32,7 +32,7 @@ fetch="../seL4"
 
 <project remote="seL4" name="seL4.git" path="kernel" revision="master"/>
 
-<project remote="seL4" name="seL4_tools.git" path="projects/tools" revision="master">
+<project remote="seL4" name="seL4_tools.git" path="projects/tools">
 	<linkfile src="common-tool" dest="tools/common"/>
 	<linkfile src="kbuild-tool" dest="tools/kbuild"/>
 	<linkfile src="elfloader-tool" dest="tools/elfloader" />
